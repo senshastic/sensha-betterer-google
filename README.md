@@ -45,14 +45,14 @@ Install the css using Stylus. You can get Stylus through the following links:
 
 Once you have Stylus, you can install the theme directly clicking here: 
 
-[![Install directly with Stylus](https://img.shields.io/badge/Install%20directly%20with-Stylus-238b8b.svg)](https://github.com/senshastic/snesh-betterer-google/raw/refs/heads/main/css/snooshle.user.css)
+[![Install directly with Stylus](https://img.shields.io/badge/Install%20directly%20with-Stylus-238b8b.svg)](https://github.com/senshastic/sensha-betterer-google/raw/refs/heads/main/css/snooshle.user.css)
 
 
 If you want **peek**, install the js script using whatever people use to manage userscripts. I used [ViolentMonkey](https://violentmonkey.github.io/) because that's what Fallen used. 
 
 - Direct link to the peek functionality: 
 
-[![Static Badge](https://img.shields.io/badge/Install_directly_with-whatever-yellow)](https://github.com/senshastic/snesh-betterer-google/raw/refs/heads/main/js/Snooshle_Peek.user.js)
+[![Static Badge](https://img.shields.io/badge/Install_directly_with-whatever-yellow)](https://github.com/senshastic/sensha-betterer-google/raw/refs/heads/main/js/Snooshle_Peek.user.js)
 
 
 ## Credits 
