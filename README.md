@@ -53,5 +53,5 @@ If you want **peek**, install the js script using whatever people use to manage 
 
 ## Credits 
 
-- [Fallen](https://github.com/FallenStar08) - Always. Forgive me god cuz I stole code from you. But then again I forced you to write that code so I think we're even. 
+- [Fallen](https://github.com/FallenStar08) - Always ❤️. Forgive me god cuz I stole code from you. But then again I forced you to write that code so I think we're even. 
 - Peloton 
