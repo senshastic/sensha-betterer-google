@@ -5,8 +5,8 @@
 // @description  Adds live previews for links in Google search results: Reddit links use the Reddit API, others use an iframe.
 // @match        https://www.google.com/*
 // @match        https://www.google.fr/*
-// @downloadURL https://github.com/senshastic/snesh-betterer-google/raw/refs/heads/main/js/Snooshle_Peek.user.js
-// @updateURL   https://github.com/senshastic/snesh-betterer-google/raw/refs/heads/main/js/Snooshle_Peek.user.js
+// @downloadURL https://github.com/senshastic/sensha-betterer-google/raw/refs/heads/main/js/Snooshle_Peek.user.js
+// @updateURL   https://github.com/senshastic/sensha-betterer-google/raw/refs/heads/main/js/Snooshle_Peek.user.js
 // @icon        https://cdn.discordapp.com/emojis/1245456048383459439.webp?size=240&quality=lossless
 // @grant        none
 // @author       sensha
