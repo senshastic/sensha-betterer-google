@@ -1,0 +1,862 @@
+/* ==UserStyle==
+@name           Googlesha
+@namespace      google.com/openstyles/stylus
+@version        1.0.0
+@description    A new userstyle
+@author         Snesh
+@preprocessor	less
+@updateURL		https://github.com/senshastic/snesh-betterer-google/raw/refs/heads/main/css/snooshle.user.css
+@var select		gradType    "Gradient style" ["animated:Animated*", "flouss: Static", "nouss:None"]
+@var checkbox	grain "Grainy texture" 1
+@var color   	gradcolor1 "Gradient Color 1" rgb(1, 1, 30)
+@var color   	gradcolor2 "Gradient Color 2" rgb(5, 1, 21)
+@var color   	gradcolor3 "Gradient Color 3" rgb(26, 26, 43)
+@var color   	gradcolor4 "Gradient Color 4" rgb(0, 0, 35)
+
+==/UserStyle== */
+
+@-moz-document regexp("^https://([a-zA-Z0-9-]+\\.)*google\\.[a-zA-Z]{3}(/|$).*") {
+
+
+
+	/*SECTION [SNESHLIB - Start] */
+	/*ANCHOR [VARIABLES]*/
+	@hap				: url('https://github.com/senshastic/sneshGPT/blob/main/assets/Hap.png?raw=true');
+	@borderRadius		: 12px;
+	@creamColor			: #d0b575;
+	@creamColorMuted	: #4f4733;
+
+
+
+	/*ANCHOR [DETACHED RULESETS] */
+	@gradientBackground: {
+		background: linear-gradient(109.6deg, @gradcolor1 0%, @gradcolor2 25%, @gradcolor3 50%, @gradcolor4 100%);
+	}
+
+	@gradientAnimation: {
+		0% {
+			background-position: 0% 0%;
+		}
+		50% {
+			background-position: 100% 100%;
+		}
+		100% {
+			background-position: 0% 0%;
+		}
+	}
+
+	@buttons: {
+		background-color: rgba(5, 5, 5, .18) !important;
+		border-radius: 12px !important;
+		box-shadow: 0 8px 15px rgba(0, 0, 0, 0.37);
+		backdrop-filter: blur(100px) saturate(110%);
+		-webkit-backdrop-filter: blur(100px);
+		transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+	}
+
+	@buttonsHover: {
+		background-color: rgba(5, 5, 5, 0) !important;
+		border-radius: 12px;
+		box-shadow: 0 8px 15px rgba(0, 0, 0, 0.37);
+		backdrop-filter: blur(100px) saturate(110%);
+		-webkit-backdrop-filter: blur(100px);
+		transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+		transform: translateY(-4px);
+	}
+
+	@transparentButtons: {
+		border-radius: 12px !important;
+		box-shadow: 0 8px 15px rgba(0, 0, 0, 0.37);
+		backdrop-filter: blur(100px) saturate(110%);
+		-webkit-backdrop-filter: blur(100px);
+		transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+	}
+
+	@buttonsFlat: {
+		border-radius: 12px !important;
+		backdrop-filter: blur(100px) saturate(110%);
+		-webkit-backdrop-filter: blur(100px);
+		transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+	}
+
+
+	@transparentButtonsHover: {
+		border-radius: 12px;
+		box-shadow: 0 8px 15px rgba(0, 0, 0, 0.37);
+		-webkit-backdrop-filter: blur(100px);
+		backdrop-filter: blur(100px) saturate(110%);
+		transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+		transform: translateY(-4px);
+	}
+
+
+	@buttonsHoverWhite: {
+		background-color: rgba(5, 5, 5, 0) !important;
+		border-radius: 12px;
+		box-shadow: 0 8px 15px rgba(255, 255, 255, .37) !important;
+		backdrop-filter: blur(100px) saturate(110%);
+		-webkit-backdrop-filter: blur(100px);
+		transform: translateY(-4px);
+		transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out, transform box-shadow 0.3s ease-in-out;
+	}
+
+	@menuItemHover: {
+		border: 1px solid rgba(0, 204, 255, 0.6);
+		background-color: rgba(5, 5, 5, 0.35) !important;
+		box-shadow: 0 0 10px 2px rgba(0, 204, 255, 0.3);
+		transform: translateY(-2px);
+		transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+		border-radius: 12px;
+	}
+
+	@grainyTexture: {
+		content: "" !important;
+		position: absolute !important;
+		top: 0 !important;
+		left: 0 !important;
+		width: 100% !important;
+		height: 100% !important;
+		pointer-events: none !important;
+		z-index: 0 !important;
+		background: url("https://raw.githubusercontent.com/senshastic/sensha-betterer-todoist/refs/heads/main/assets/noise.svg") repeat !important;
+		opacity: 0.23 !important;
+	}
+
+	@backdrop: {
+		background-color: rgba(5, 5, 5, .18) !important;
+		border-radius: 12px;
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+		backdrop-filter: blur(100px) saturate(110%);
+		-webkit-backdrop-filter: blur(100px);
+		transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+		padding: 5px;
+	}
+	
+	@backdropSimpler: {
+		background-color: rgba(5, 5, 5, .18) !important;
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+		backdrop-filter: blur(100px) saturate(110%);
+		-webkit-backdrop-filter: blur(100px);
+		transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+	}
+
+	@disappear: {
+		background: transparent !important;
+		border: 0px;
+		box-shadow: none;
+	}
+
+	@transparent: {
+		background: transparent;
+	}
+
+	@noise: {
+		content: "" !important;
+		background: url("https://raw.githubusercontent.com/senshastic/sensha-betterer-todoist/refs/heads/main/assets/noise.svg") repeat !important;
+		background-attachment: fixed;
+		background-repeat: no-repeat;
+		background-size: cover;
+		position: fixed;
+		top: 0 !important;
+		left: 0 !important;
+		width: 100% !important;
+		height: 100% !important;
+		pointer-events: none !important;
+		z-index: -1 !important;
+		opacity: 0.23 !important;
+	}
+
+
+	@boxShadowHover: {
+		box-shadow: 0 0px 10px rgba(0, 204, 255, 0.6);
+		background-color: rgba(0, 81, 255, 0.1);
+	}
+
+	@textArea: {
+		border: 1.5px solid @creamColor !important;
+		background-color: transparent !important;
+	}
+
+	/* ANCHOR [ANIMATIONS] */
+	@hoverChannelSlide: {
+		margin-left: 10px !important;
+		transition: margin-left 0.2s ease;
+		background-color: transparent;
+	}
+
+	/* Snake */
+	@snakeTarget: {
+		position: relative;
+		padding: 16px;
+		border-radius: 18px;
+		background: rgba(0, 0, 0, 0.7);
+		z-index: 1;
+		overflow: hidden;
+	}
+
+
+	@snakeBefore: {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		border-radius: inherit;
+		padding: 3px;
+		background: linear-gradient(90deg, transparent 0%, transparent 40%, white 50%, transparent 60%, transparent 100%);
+		background-size: 200% 200%;
+		animation: smoothSnakeLine 6s linear infinite;
+		-webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+		mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+		-webkit-mask-composite: xor;
+		mask-composite: exclude;
+		z-index: -1;
+	}
+
+	@keyframes smoothSnakeLine {
+		0% {
+			background-position: 0% 50%;
+		}
+		100% {
+			background-position: 200% 50%;
+		}
+	}
+
+	/*!SECTION [SNESHLIB - End]*/
+	
+	/*ANCHOR [ROOT] */
+	
+	:root{
+	--gS5jXb: @creamColor;
+    --XKMDxc: transparent;
+	} 
+	
+	/*ANCHOR [BODY & GRAIN] */
+	
+	body:not(.EIlDfe) when (@gradType =flouss) {
+		@gradientBackground();
+	}
+    
+    body[jsmodel="hspDDf "] when (@gradType =flouss) {
+		@gradientBackground();
+	}
+    
+    #yDmH0d when (@gradType =flouss) {
+		@gradientBackground();
+	}
+	
+	.neterror{
+		@gradientBackground();
+	}
+
+	body:not(.EIlDfe) when (@gradType =animated) {
+		@gradientBackground();
+		background-size: 400% 400%;
+		animation: gradientAnimation 20s ease infinite;
+	}
+    
+    #yDmH0d when (@gradType =animated) {
+		@gradientBackground();
+		background-size: 400% 400%;
+		animation: gradientAnimation 20s ease infinite;
+	}
+    
+    body[jsmodel="hspDDf "] when (@gradType =animated) {
+		@gradientBackground();
+		background-size: 400% 400%;
+		animation: gradientAnimation 20s ease infinite;
+	}
+
+
+	body:not(.EIlDfe) when (@gradType =nouss) {
+		background-color: @gradcolor1 !important;
+	}
+    
+    body[jsmodel="hspDDf "] when (@gradType =nouss) {
+		background-color: @gradcolor1 !important;
+	}
+    
+    #yDmH0d when (@gradType =nouss) {
+		background-color: @gradcolor1 !important;
+	}
+	
+	
+	@keyframes gradientAnimation {
+		@gradientAnimation();
+	}
+	
+	body:not(.EIlDfe)::before when (@grain =1) {
+		@noise();
+		z-index: 0 !important;
+	}
+    
+	
+	
+	/*ANCHOR [GOOGLE HOMEPAGE] */
+	
+	.gb_Ea.gb_Id.gb_2d.gb_F.gb_Kc.gb_e.gb_1a.gb_Vc,
+	.c93Gbe {
+		@disappear();
+	}
+	
+	
+	input[aria-label="Google Search"]:hover,
+	input[aria-label="I'm Feeling Lucky"]:hover,
+	.gbqfba:hover {
+		@buttonsHover();
+		border: 1px solid @creamColor !important;
+	}
+	
+	
+	input[aria-label="Google Search"],
+	input[aria-label="I'm Feeling Lucky"],
+	.gbqfba {
+		@backdrop();
+		border: 1px solid @creamColor !important;
+	}
+    
+    .Maj6Tc{
+        border: 1px solid @creamColor !important;
+    }
+	
+	/*ANCHOR [GOOGLE HOMEPAGE SEARCH BAR DROPDOWN] */
+	
+	.WggQGd,
+    .PMUcxf{
+		color: @creamColor;
+	}
+	
+	.eIPGRd{
+		margin: 5px;
+	}
+	
+	.eIPGRd:hover{
+		margin: 5px;
+		box-shadow: 0 0 3px rgba(255, 255, 255, 0.3) !important;
+		@hoverChannelSlide();
+	}
+	
+	
+	/*ANCHOR [Profile thingy] */
+	
+	.MCcOAc,
+	.SSPGKf.aRDKUe,
+	.qLP7kc.F249q.kCsp2e.PIlMcf{
+		@disappear();
+	}
+	
+	.aRDKUe .Lvwayc,
+	.emcav .RNNXgb,
+	.RNNXgb,
+	.aRDKUe .bMnvr,
+    .DJbVFb{
+		@backdrop();
+	}
+    
+    .ZFiwCf,
+    .S8ee5.CwbYXd.wHYlTd,
+    .nNzjpf-cS4Vcb-PvZLI-QaAxMd-haAclf{
+        @buttons();
+        background-color: rgba(5, 5, 5, 1) !important;
+    }
+    .ZFiwCf:hover,
+    .S8ee5.CwbYXd.wHYlTd:hover,
+    .nNzjpf-cS4Vcb-PvZLI-QaAxMd-haAclf:hover{
+        @buttonsHover();
+        background-color: rgb(1, 2, 29) !important;
+    }
+    
+    .XAFD5c,
+    .MagqMc .ZFiwCf,
+    .ZVHLgc,
+    .LJQfbb {
+        background-color: transparent !important;
+    }
+	
+	.XB27pc.y5Iqsb.da1DUb.jFfZdd.Dn5Ezd,
+    .aRDKUe .qLP7kc .jFfZdd,
+    .jFfZdd .Dn5Ezd {
+    background-color: rgba(5, 5, 5, 0.18) !important;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+	}
+	
+    
+    .jFfZdd.Dn5Ezd:not(.XB27pc.y5Iqsb.da1DUb.jFfZdd.Dn5Ezd):hover,
+    .HyhVZe:hover{
+		@menuItemHover();
+	}
+    
+    
+    .HyhVZe{
+        @disappear();
+    }
+    
+	
+	
+	
+	.aajZCb{
+		@backdropSimpler();
+	}
+	
+	
+	.sbhl{
+		@disappear();
+	}
+	
+	
+	
+	/*ANCHOR [TOOLTIPS] */
+	div[style="background: rgb(32, 33, 36);border: 1px solid rgb(60, 64, 67);color: rgb(189, 193, 198);display: block;font-size: 11px;font-weight: bold;height: 29px;left: 715.5px;line-height: 29px;padding: 0px 10px;position: absolute;text-align: center;top: 426px;white-space: nowrap;visibility: visible;z-index: 2000;box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 4px;box-sizing: border-box;transition: opacity 0.13s;"]{
+		@backdrop();
+	}
+	
+	.gb_zc{
+		@backdrop();
+	}
+	
+	.EIlDfe.uOat3d{
+		@disappear();
+	}
+	/*ANCHOR [SEARCH RESULTS] */
+	
+	
+	.sfbg {
+		@backdrop();
+	}
+	
+	.rfiSsc{
+		@backdropSimpler();
+	}
+	
+	div[jsname="bVqjv"]:hover{
+		@buttonsHover();
+	}
+	
+	[selected].YmvwI:hover{
+		background-color: rgba(5, 5, 5, 0) !important;
+		border-radius: 0px;
+		box-shadow: 0 8px 15px rgba(0, 0, 0, 0.37);
+		backdrop-filter: blur(100px) saturate(110%);
+		-webkit-backdrop-filter: blur(100px);
+		transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+		transform: translateY(0px);
+	}
+	
+	
+	.dG2XIf,
+	.Ww4FFb,
+	.eFM0qc.BCF2pd,
+	.appbar, 
+	.sfbg, 
+	.Lu57id,
+	.p8Jhnd,
+	.f6F9Be {
+		@disappear();
+	}
+	
+	.p8Jhnd:hover{
+		@buttonsHover();
+	}
+	
+	.UivI7b,
+	.WNN1b,
+    .sudu5c,
+    .MjJqGe{
+		@backdrop();
+	}
+	
+	.UivI7b:hover,
+    .MjJqGe:hover {
+		@buttonsHover();
+	}
+    
+    .osrp-blk,
+    .uais2d {
+        @backdrop();
+    }
+    
+    .KcXNxb{
+        @disappear();
+    }
+    
+    .niO4u,
+    .rXoM2c .niO4u {
+        @buttons();
+    }
+    
+    .niO4u:hover,
+    .rXoM2c .niO4u:hover {
+        @buttonsHover();
+    }
+	
+	
+	/*ANCHOR [IMAGE SEARCH RESULTS] */
+	.wH6SXe {
+		@disappear();
+	}
+	
+	div[jsname="dTDiAc"]{
+		@backdrop();
+	}
+	
+	div[jsname="dTDiAc"]:hover {
+		@boxShadowHover();
+	}
+	
+	/*ANCHOR [SEARCH WEBSITE] */
+	
+	input[jsname="YPqjbf"]{
+		@textArea();
+	}
+	
+	g-flat-button{
+		border: none !important;
+	}
+	
+	.DYjfCf:hover{
+		@buttonsHover();
+	}
+	
+	/*ANCHOR [ABOUT THIS LOCATION] */
+	
+	.qk7LXc{
+		@backdrop();
+	}
+	
+	g-raised-button:hover{
+		@buttonsHover();
+	}
+	/*ANCHOR [TRANSLATE] */
+	
+	.cm5a3b{	
+		@backdrop();
+		padding: 0px !important;
+		color: @creamColor;
+	}
+	
+	#tw-target{
+		@backdrop();
+	}
+
+
+    .vIifob{
+        @backdrop();
+    }
+    
+    
+    div[style*="background: rgb(32, 33, 36);"][style*="border: 1px solid rgb(60, 64, 67);"][style*="z-index: 2000;"]{
+        @backdrop();
+        border: solid 1px @creamColor !important;
+    
+    } 
+    
+    div[style*="border-width: 0px 6px 6px;"][style*="border-color: rgb(32, 33, 36) transparent;"][style*="position: absolute;"]{
+        @disappear();
+        background: none !important;
+    }
+    
+   div[style*="border-width: 0px 6px 6px;"][style*="border-color: rgb(60, 64, 67) transparent;"],
+div[style*="border-width: 0px 6px 6px;"][style*="border-color: rgb(32, 33, 36) transparent;"] {
+    display: none !important;
+}
+
+
+
+.UFjXSc{
+    padding: 0px !important;
+}
+
+
+.S8ee5{
+    @backdrop();
+}
+
+c-wiz[jsrenderer="UXfCNd"][class="gETySd"][jsname="bJr0R"],
+.VuvQze .RfPPs,
+.Qc895c,
+.hjFrpb.PZPZlf {
+     @backdrop();
+}
+
+.kFwPee,
+.dzz8Xc,
+.k4o2Hc,
+.gnU4tc,
+.Dgr5Hb,
+.uD4ibd,
+.aJB11e,
+.T4LgNb,
+.NEw0P,
+.SHW0Qe,
+.pKv8Zb {
+    @disappear();
+}
+
+.Dgr5Hb {
+    border-top: 4px solid @creamColor;
+}
+
+
+@keyframes wave {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+td:not(.d6cvqb.BBwThe) .SJajHc.NVbCr {
+  animation: wave 1s ease-in-out infinite;
+}
+
+td:not(.d6cvqb.BBwThe) .fl[aria-label="Page 1"] .SJajHc.NVbCr {
+  animation-delay: 0.1s;
+}
+
+td:not(.d6cvqb.BBwThe) .fl[aria-label="Page 2"] .SJajHc.NVbCr {
+  animation-delay: 0.2s;
+}
+
+td:not(.d6cvqb.BBwThe) .fl[aria-label="Page 3"] .SJajHc.NVbCr {
+  animation-delay: 0.3s;
+}
+
+td:not(.d6cvqb.BBwThe) .fl[aria-label="Page 4"] .SJajHc.NVbCr {
+  animation-delay: 0.4s;
+}
+
+td:not(.d6cvqb.BBwThe) .fl[aria-label="Page 5"] .SJajHc.NVbCr {
+  animation-delay: 0.5s;
+}
+
+td:not(.d6cvqb.BBwThe) .fl[aria-label="Page 6"] .SJajHc.NVbCr {
+  animation-delay: 0.6s;
+}
+
+td:not(.d6cvqb.BBwThe) .fl[aria-label="Page 7"] .SJajHc.NVbCr {
+  animation-delay: 0.7s;
+}
+
+td:not(.d6cvqb.BBwThe) .fl[aria-label="Page 8"] .SJajHc.NVbCr {
+  animation-delay: 0.8s;
+}
+
+td:not(.d6cvqb.BBwThe) .fl[aria-label="Page 9"] .SJajHc.NVbCr {
+  animation-delay: 0.9s;
+}
+
+td:not(.d6cvqb.BBwThe) .fl[aria-label="Page 10"] .SJajHc.NVbCr {
+  animation-delay: 1.0s;
+}
+
+td:not(.d6cvqb.BBwThe) .fl[aria-label="Page 11"] .SJajHc.NVbCr {
+  animation-delay: 1.1s;
+}
+
+td:not(.d6cvqb.BBwThe) .fl[aria-label="Page 12"] .SJajHc.NVbCr {
+  animation-delay: 1.2s;
+}
+
+td:not(.d6cvqb.BBwThe) .fl[aria-label="Page 13"] .SJajHc.NVbCr {
+  animation-delay: 1.3s;
+}
+
+td:not(.d6cvqb.BBwThe) .fl[aria-label="Page 14"] .SJajHc.NVbCr {
+  animation-delay: 1.4s;
+}
+
+td:not(.d6cvqb.BBwThe) .fl[aria-label="Page 15"] .SJajHc.NVbCr {
+  animation-delay: 1.5s;
+}
+
+td:not(.d6cvqb.BBwThe) .fl[aria-label="Page 16"] .SJajHc.NVbCr {
+  animation-delay: 1.6s;
+}
+
+td:not(.d6cvqb.BBwThe) .fl[aria-label="Page 17"] .SJajHc.NVbCr {
+  animation-delay: 1.7s;
+}
+
+td:not(.d6cvqb.BBwThe) .fl[aria-label="Page 18"] .SJajHc.NVbCr {
+  animation-delay: 1.8s;
+}
+
+td:not(.d6cvqb.BBwThe) .fl[aria-label="Page 19"] .SJajHc.NVbCr {
+  animation-delay: 1.9s;
+}
+
+td:not(.d6cvqb.BBwThe) .fl[aria-label="Page 20"] .SJajHc.NVbCr {
+  animation-delay: 2.0s;
+}
+
+td:not(.d6cvqb.BBwThe) .fl[aria-label="Page 21"] .SJajHc.NVbCr {
+  animation-delay: 2.1s;
+}
+
+td:not(.d6cvqb.BBwThe) .fl[aria-label="Page 22"] .SJajHc.NVbCr {
+  animation-delay: 2.2s;
+}
+
+td:not(.d6cvqb.BBwThe) .fl[aria-label="Page 23"] .SJajHc.NVbCr {
+  animation-delay: 2.3s;
+}
+
+td:not(.d6cvqb.BBwThe) .fl[aria-label="Page 24"] .SJajHc.NVbCr {
+  animation-delay: 2.4s;
+}
+
+td:not(.d6cvqb.BBwThe) .fl[aria-label="Page 25"] .SJajHc.NVbCr {
+  animation-delay: 2.5s;
+}
+
+
+.GKS7s,
+.GLcBOb .pZvJc,
+.cF4V5c,
+.nz9sqb.EHzcec,
+.fKmH1e,
+.nfSF8e.hdtb-tl-sel,
+.ddlshare-dialog,
+.ea0Lbe,
+.EHzcec,
+.f6GA0{
+    @backdrop();
+}
+
+
+.nz9sqb.EHzcec .LVal7b,
+.LVal7b {
+    background: transparent !important;
+}
+
+
+.f6F9Be.TrMVnc,
+.c93Gbe{
+    background-color: rgba(5, 5, 5, .18) !important;
+}
+
+.pD4qTd .yMAEcf{
+    @backdropSimpler();
+}
+
+
+.sr9hec.OvQkSb.s3IB3{
+
+    @buttonsFlat();
+}
+
+.sr9hec.OvQkSb.s3IB3:hover{
+    @buttonsHover();
+}
+
+
+.AaVjTc a:link{
+    color: @creamColor !important;
+}
+
+body.EllDfe,
+.LVal7b,
+.tX9u1b:hover,
+.REySof,
+.IFmkIb.IFmkIb, .lIHVNe.lIHVNe{
+    background: transparent !important;
+}
+
+.j1ei8c:hover,
+button[jsname="ggE0ke"]:hover,
+button[jsname="xpqF6b"]:hover,
+.dvfTSb.OdANFd:hover {
+    @buttonsHover();
+}
+
+
+.F9Idpe.Iy1nvd {
+    background: linear-gradient(to left, transparent 0%, @gradcolor1 60%, @gradcolor4);
+}
+
+.F9Idpe {
+    background: linear-gradient(to right, transparent 0%, @gradcolor1 60%, @gradcolor4);
+}
+
+.NQyKp.h4wEae,
+.dvfTSb.OdANFd{
+    @backdropSimpler();
+}
+
+.ct5Ked.klitem-tr.PZPZlf{
+   @backdrop();
+}
+
+.ct5Ked.klitem-tr.PZPZlf:hover,
+.vIifob:hover{
+   @boxShadowHover();
+}
+
+.s1SShd .mDCFkc{
+    @backdrop();
+}
+
+/*ANCHOR [REVIEWS MAPS] */
+
+.KnSn4,
+a.ab_button, a.ab_button:visited,
+[jsname="uxAMZ"],
+.bTLhlf {
+     background: transparent !important;
+}
+
+a.ab_button:hover, a.ab_button:visited:hover{
+
+    @buttonsHover();
+}
+
+a.ab_button, a.ab_button:visited,
+.immersive-container,
+.YoOupc.UxY8gd,
+.NUTAPc, .EnboWc{
+    @backdrop();
+}
+.iHM8f{
+     @backdropSimpler();
+}
+
+g-inner-card{
+    @backdrop();
+}
+
+.kLhEKe{
+    @disappear();
+}
+
+.sr9hec.OvQkSb.s3IB3{
+    @backdropSimpler();
+}
+
+
+/*ANCHOR [FIX MODALS] */
+
+
+
+
+/* Note: T4LgNb is the problem position: relative; 
+
+.SSPGKf {
+    position: relative;
+    min-height: 100%;
+} 
+
+
+body:not(.EIlDfe.uOat3d) {
+     background: transparent !important;
+}
+
+
+*/ 
+
+
+
+}
