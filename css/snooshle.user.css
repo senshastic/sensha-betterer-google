@@ -5,7 +5,7 @@
 @description    A new userstyle
 @author         Snesh
 @preprocessor	less
-@updateURL		https://github.com/senshastic/snesh-betterer-google/raw/refs/heads/main/css/snooshle.user.css
+@updateURL		https://github.com/senshastic/sensha-betterer-google/raw/refs/heads/main/css/snooshle.user.css
 @var select		gradType    "Gradient style" ["animated:Animated*", "flouss: Static", "nouss:None"]
 @var checkbox	grain "Grainy texture" 1
 @var color   	gradcolor1 "Gradient Color 1" rgb(1, 1, 30)
