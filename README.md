@@ -34,6 +34,10 @@ If you do not like the gradient or if you are like me and you like changing colo
 
 ## Installation 
 
+<p align="center">
+    <img src="assets/snooshle_acrylic.png" alt="snooshle_acrylic.png" />
+</p>
+
 Install the css using Stylus. You can get Stylus through the following links: 
 
 -   [Firefox](https://addons.mozilla.org/en-US/firefox/addon/styl-us/)
@@ -55,3 +59,8 @@ If you want **peek**, install the js script using whatever people use to manage 
 
 - [Fallen](https://github.com/FallenStar08) - Always ❤️. Forgive me god cuz I stole code from you. But then again I forced you to write that code so I think we're even. 
 - Peloton 
+
+
+<p align="center">
+    <img src="assets/snooshle_right.png" alt="snooshle_right.png" />
+</p>
