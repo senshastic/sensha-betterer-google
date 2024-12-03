@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Googlesha
 @namespace      google.com/openstyles/stylus
-@version        1.0.2
+@version        1.0.3
 @description    A new userstyle
 @author         Snesh
 @preprocessor	less
@@ -853,6 +853,25 @@ body{overflow-x: hidden !important;}
     @buttonsHover();
 }
 
+
+.MR2UAc,
+.pxhZNb {
+	background: transparent !important;
+    border: solid 0.56px @creamColor;
+}
+
+.MR2UAc:hover{
+	@buttonsHover();
+    border: solid 0.56px @creamColor;
+}
+
+.gjoUyf.MR2UAc.I6a0ee.gWUzU.F5z5N.AsWFZc.Inx6Z.rjpYgb.En7IMd{
+    display: none !important;
+}
+
+.BklRsd{
+      @backdrop();
+}
 /* Note: T4LgNb is the problem position: relative; 
 
 .SSPGKf {
