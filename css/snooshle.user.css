@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Googlesha
 @namespace      google.com/openstyles/stylus
-@version        1.0.3
+@version        1.0.4
 @description    A new userstyle
 @author         Snesh
 @preprocessor	less
@@ -844,12 +844,16 @@ body{overflow-x: hidden !important;}
 
 .ab_button,
 .Qj68Ed,
-.r2fjmd.X3BRhe.FgDnmf.sr9hec.OvQkSb.a11Pr {
+.r2fjmd.X3BRhe.FgDnmf.sr9hec.OvQkSb.a11Pr,
+.mQo3nc{
     @backdrop();
     background-image: none !important;
 }
 
-.ab_button:hover{
+.ab_button:hover,
+.gt-is-itm:hover,
+.tw-lliw:hover,
+.MR2UAc:hover{
     @buttonsHover();
 }
 
@@ -872,6 +876,21 @@ body{overflow-x: hidden !important;}
 .BklRsd{
       @backdrop();
 }
+
+
+.gt-is-itm,
+.v7VvEe,
+.zaokob,
+.MR2UAc{
+    @backdropSimpler();
+    border: solid 0.5px @creamColor;
+}
+
+.language_list_languages.tw-ll-top::after{
+    @disappear();
+}
+
+
 /* Note: T4LgNb is the problem position: relative; 
 
 .SSPGKf {
