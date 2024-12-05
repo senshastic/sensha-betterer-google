@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Googlesha
 @namespace      google.com/openstyles/stylus
-@version        1.0.4
+@version        1.0.5
 @description    A new userstyle
 @author         Snesh
 @preprocessor	less
@@ -873,10 +873,15 @@ body{overflow-x: hidden !important;}
     display: none !important;
 }
 
-.BklRsd{
+.BklRsd,
+.SD5Cxb,
+.o6lyVb{
       @backdrop();
 }
-
+.o6lyVb {
+    border-color: transparent;
+    border-style: solid;
+}
 
 .gt-is-itm,
 .v7VvEe,
@@ -889,6 +894,8 @@ body{overflow-x: hidden !important;}
 .language_list_languages.tw-ll-top::after{
     @disappear();
 }
+
+
 
 
 /* Note: T4LgNb is the problem position: relative; 
