@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Googlesha
 @namespace      google.com/openstyles/stylus
-@version        1.0.5
+@version        1.0.7
 @description    A new userstyle
 @author         Snesh
 @preprocessor	less
@@ -896,6 +896,24 @@ body{overflow-x: hidden !important;}
 }
 
 
+.Jb0Zif .kIXOkb:hover, .Jb0Zif .rl_item_base:hover {
+	@backdropSimpler();
+}
+
+
+/*ANCHOR [SPORT RESULTS] */
+
+.I6TXqe,
+.jTw2d {
+    @backdrop();
+    border: none !important;
+}
+
+
+.imso-hov:hover {
+   @backdropSimpler();
+} 
+
 
 
 /* Note: T4LgNb is the problem position: relative; 
@@ -909,7 +927,7 @@ body{overflow-x: hidden !important;}
 body:not(.EIlDfe.uOat3d) {
      background: transparent !important;
 }
-
+imso-hov liveresults-sports-immersive__match-grid-bottom-border"
 
 */ 
 
